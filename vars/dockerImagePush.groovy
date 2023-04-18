@@ -6,8 +6,8 @@
 
     withCredentials([usernamePassword(
     credentialsId: 'vignan91-dockerhub', 
-    usernameVariable: 'USER',
-    passwordVariable: 'PASS'
+    usernameVariable: "USER",
+    passwordVariable: "PASS"
     )]) {
     
     sh "docker login -u '$USER' -p '$PASS'"
