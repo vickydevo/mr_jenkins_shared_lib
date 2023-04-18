@@ -1,9 +1,8 @@
  call(String project, String ImageTags, String hubUser){
 
-   withCredentials([usernamePassword(credentialsId: 'vignan91-dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-    // some block
-}
-    
+//    withCredentials([usernamePassword(credentialsId: 'vignan91-dockerhub', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+//     // some block
+// }   
 
     withCredentials([usernamePassword(
     credentialsId: 'vignan91-dockerhub', 
