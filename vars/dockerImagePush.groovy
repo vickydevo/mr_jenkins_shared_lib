@@ -12,7 +12,7 @@
     )]) {
     
     sh """ 
-    sudo docker login -u $User-docker -p $Pass-docker 
+    sudo docker login -u '$User-docker' -p '$Pass-docker' 
     """
     }
    sh  "docker image push ${hubUser}/${project} ${hubUser}/${project}:${ImageTag}"
