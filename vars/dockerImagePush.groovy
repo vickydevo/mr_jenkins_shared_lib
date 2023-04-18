@@ -7,16 +7,14 @@
 
     withCredentials([usernamePassword(
     credentialsId: 'vignan91-dockerhub', 
-    passwordVariable: 'Pass-docker',
-    usernameVariable: 'User-docker'
+    usernameVariable: 'User-docker',
+    passwordVariable: 'Pass-docker'
     )]) {
     
-    sh """ 
-    sudo docker login -u '$User-docker' -p '$Pass-docker' 
-    """
+    sh "docker login -u '$User-docker' -p '$Pass-docker'"
     }
-   sh  "docker image push ${hubUser}/${project} ${hubUser}/${project}:${ImageTag}"
-   sh  "docker image push ${hubUser}/${project} ${hubUser}/${project}:latest"
+   sh  "docker image push  ${hubUser}/${project}:${ImageTag}"
+   sh  "docker image push  ${hubUser}/${project}:latest"
     
 
 // def call(String aws_account_id, String region, String ecr_repoName){
